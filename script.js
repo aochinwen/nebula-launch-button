@@ -299,12 +299,10 @@
     playWhoosh();
     grandFinale();
 
-    // Let the grand finale breathe a little longer before the music and
-    // fireworks fade out and the outro/reveal screen takes over.
-    setTimeout(() => fadeOutMusic(1800), 1000);
-
     // Grand finale plays out across ~3 staggered waves (see grandFinale) —
     // hold on the fireworks before fading to black and revealing the message.
+    // The music keeps playing on through the reveal screen — it's only
+    // stopped by the hidden hold-to-reset gesture (see resetToLaunch).
     setTimeout(() => {
       setState('reveal');
     }, 4800);
