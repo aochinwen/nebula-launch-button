@@ -74,9 +74,9 @@
   // trains in the background artwork, regardless of viewport aspect ratio
   // (the image is shown with object-fit: contain, so it may be letterboxed).
   // ---------------------------------------------------------------------
-  const BG_IMAGE_ASPECT = 1024 / 566;
+  const BG_IMAGE_ASPECT = 3016 / 1590;
   const BUTTON_X_PCT = 0.5;   // horizontal center of the image
-  const BUTTON_Y_PCT = 0.75;  // vertical position within the image, between the trains
+  const BUTTON_Y_PCT = 0.72;  // vertical position within the image, between the trains
 
   function positionLaunchButton() {
     const stage = document.getElementById('stage');
