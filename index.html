@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<title>Nebula X Hackathon 2026 &mdash; Launch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="state-launch">
+
+  <!-- Rotate device notice (portrait guard) -->
+  <div class="rotate-notice" id="rotateNotice">
+    <div class="rotate-icon">&#8635;</div>
+    <p>Please rotate your iPad to landscape</p>
+  </div>
+
+  <div class="stage" id="stage">
+
+    <!-- Background layer, letterboxed to stay fully visible -->
+    <div class="bg-frame">
+      <img src="assets/background.png" alt="Nebula X Hackathon 2026" class="bg-image" />
+    </div>
+
+    <!-- Dark overlay used to dim the background during countdown -->
+    <div class="dim-overlay" id="dimOverlay"></div>
+
+    <!-- Fireworks canvas -->
+    <canvas id="fireworksCanvas" class="fireworks-canvas"></canvas>
+
+    <!-- Launch screen -->
+    <section class="screen launch-screen" id="launchScreen">
+      <button class="launch-button" id="launchButton" aria-label="Press to launch countdown">
+        <span class="btn-ring"></span>
+        <span class="btn-face">
+          <span class="btn-label-top">PRESS TO</span>
+          <span class="btn-label-main">LAUNCH</span>
+        </span>
+      </button>
+    </section>
+
+    <!-- Countdown screen -->
+    <section class="screen countdown-screen" id="countdownScreen">
+      <div class="countdown-number" id="countdownNumber"></div>
+    </section>
+
+    <!-- Fade to black -->
+    <div class="fade-black" id="fadeBlack"></div>
+
+    <!-- Reveal screen -->
+    <section class="screen reveal-screen" id="revealScreen">
+      <p class="reveal-message" id="revealMessage">Nebula X Hackathon 2026 has officially launched!</p>
+    </section>
+
+  </div>
+
+  <audio id="countdownMusic" src="assets/countdown-music.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
